@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+
+<html>
+<head></head>
+<body>
+
+	<canvas id="c" width="200" height="200"></canvas>
+	<script>
+		var c = document.querySelector("#c");
+		var ctx = c.getContext("2d");
+
+		var image = new image;
+
+		image.onload = function() {
+			console.log("Loaded Image");
+			ctx.drawImage(image, 0, 0, c.width, c.height);
+			var savedImage = c.toDataURL();
+			window.open(savedImage);
+		}
+
+		image.src = "http://www.dumpaday.com/wp-content/uploads/2014/03/z-shut-up-and-take-my-money-meme-1.jpeg";
+
+	</script>
+</body>
+</html>

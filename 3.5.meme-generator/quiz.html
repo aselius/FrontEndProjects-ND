@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+
+<html>
+<head></head>
+<body>
+	<canvas id="c" width="500" height="500"></canvas>
+
+	<script>
+
+		var c = document.querySelector("#c");
+		var ctx = c.getContext("2d");
+
+/*
+		ctx.fillStyle = "#000";
+
+		ctx.strokeRect(50, 50, 100, 100);
+
+		ctx.beginPath();
+		ctx.moveTo(75, 75);
+		ctx.lineTo(125, 125);
+		ctx.lineTo(125, 75);
+		ctx.lineTo(75, 75);
+		ctx.fill();
+*/
+// translate : ctx.translate(50,50) 50px x 50px y
+// rotate : ctx.rotate(angleRads)
+// scale : ctx.scale(2,3) 2x x 3x y
+
+// generally scale -> rotate -> translate in order
+
+		ctx.font = "36px Impact";
+		ctx.textAllign = "center";
+
+		ctx.fillStyle = "#fff";
+		ctx.fillText("CANVAS MEMES!", c.width / 2, 50);
+
+		ctx.strokeStyle = "#000";
+		ctx.lineWidth = 3;
+		ctx.strokeText("CANVAS MEMES!", c.width / 2, 50);
+
+	</script>
+
+
+</body>
+</html>
