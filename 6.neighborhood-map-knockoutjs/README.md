@@ -3,7 +3,7 @@
 -----------
 
 ### Screenshot
-![This is a screenshot of the application](6.neighborhood-map-knockoutjs/snapshot.png "App Screenshot (Large Device)")
+![This is a screenshot of the application](snapshot.png "App Screenshot (Large Device)")
 
 ### Basic instructions on using the application:
 1. Download the project on your local device
@@ -15,7 +15,7 @@
 7. The box on the left side of the map show you more information about the location you have searched for using the Duck Duck Go API.
 
 ### How to Interface the Mobile version
-![This is a screenshot of the application](6.neighborhood-map-knockoutjs/snapshot2.png "App Screenshot (Small Device)") ![This is a screenshot of the application](6.neighborhood-map-knockoutjs/snapshot3.png "App Screenshot (Small Device)")
+![This is a screenshot of the application](snapshot2.png "App Screenshot (Small Device)") ![This is a screenshot of the application](snapshot3.png "App Screenshot (Small Device)")
 
 1. Press on the hamburger menu to access the list of all the places marked on the map.
 2. Click on the place name on the list. (List appears below the filter bar.)

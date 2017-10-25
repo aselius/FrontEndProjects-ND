@@ -3,7 +3,7 @@ UDACITY FRONT END P3: Frogger Game
 
 Screen Shot
 -----------
-![This is a screenshot of the game](3.frogger-game/images/Capture.jpg "Game Screenshot")
+![This is a screenshot of the game](/images/Capture.jpg "Game Screenshot")
 
 How to Run
 ----------
