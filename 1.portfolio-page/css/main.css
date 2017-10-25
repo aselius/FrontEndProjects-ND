@@ -1,0 +1,76 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	color: #747566;
+	font-weight: 400;
+}
+
+p {
+	color: #bcbbbb;
+}
+
+hr {
+	border: none;
+	height: 6px;
+	color: #bcbbbb;
+	background-color: #bcbbbb;
+	margin: 15px auto;
+}
+
+nav {
+	width: 100%;
+	background-color: #628794;
+}
+
+a:link,
+a:visited {
+	font-size: 2em;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 0 10px;
+	background-color: #628794;
+}
+
+.title-name {
+	font-size: 4em;
+	font-weight: 100;
+}
+
+.title-subname {
+	font-size: 1.5em;
+	margin: 0 auto;
+	color: #d3d3d3;
+}
+
+.title-logo {
+	margin: 20px -15px 0;
+	width: 100px;
+	height: auto;
+}
+
+.featured-work {
+	font-size: 2.5em;
+	font-weight: 400;
+}
+
+.portfolio-title {
+	font-size: 2em;
+	margin: 5px -15px;
+}
+
+.bottom-border {
+	color: #ffffff;
+	width: 100%;
+	margin: 0;
+	background-color: #628794;
+}
+
+.onclick-image {
+	margin: auto;
+}

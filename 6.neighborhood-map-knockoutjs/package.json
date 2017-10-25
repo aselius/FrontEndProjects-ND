@@ -1,0 +1,26 @@
+{
+  "name": "neighborhoo_map",
+  "version": "1.0.0",
+  "description": "prototype for a map web app",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "nonce": "^1.0.3",
+    "oauth-signature": "^1.3.1",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aselius/NeighborhoodMap.git"
+  },
+  "author": "Jaewoo Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aselius/NeighborhoodMap/issues"
+  },
+  "homepage": "https://github.com/aselius/NeighborhoodMap#readme"
+}

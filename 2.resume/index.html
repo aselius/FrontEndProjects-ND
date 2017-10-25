@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Resume markup (Jaewoo Park) -->
+<!--
+Changes Made:
+1: The markup was changed quite a bit. I wanted to try a different layout
+than the one that was provided. I didn't really like the way skills were positioned
+and squeezed next to the profile picture. The contact info, therefore was pushed down
+and was juxtaposed with the profile picture.
+2: Positioning was changed to Bio -> skills -> projects -> work/education -> map.
+
+Future changes pending
+1: Have a fluid page that feeds different HTML code depending on the role.
+-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>Jaewoo Park's Resume</title>
+
+		<!-- css libraries and files-->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- js libraries and files-->
+		<script src="js/jQuery.js"></script>
+		<script src="js/helper.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+		<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+		<!-- Bring in Polymer Elements -->
+		<link rel="import" href="bower_components/paper-menu-button/paper-menu-button.html">
+
+		<!-- Responsive viewport -->
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<div id="main">
+			<header id="header" class="center-content clearar-fix">
+				<!--<ul id="topContacts" class="flex-box"></ul>-->
+				<!-- <nav>
+					<paper-menu-button>Hello</paper-menu-button>
+				</nav> -->
+			</header>
+			<section id="profile" class="center-content imgwrap light-blue">
+				<div class="imgwrap profile-entry">
+					<div id="profilePic">
+					</div>
+					<div id="contacts">
+					</div>
+				</div>
+			</section>
+			<div style="clear: both;"></div>
+			<section id="skillOverview" class="blue">
+			</section>
+			<section id="biosummary" class="center-content clearar-fix">
+			</section>
+			<section id="detailedSkills" class="gray">
+			</section>
+			<section id="projects">
+				<h2>Projects</h2>
+				<div id="webProjects"><h3>Web Dev Projects</h3></div>
+				<div id="dataProjects"><h3>Data Projects</h3></div>
+				<div id="bioProjects"><h3>Bioengineering Projects</h3></div>
+			</section>
+			<section id="workExperience" class="gray">
+				<h2>Work Experience</h2>
+			</section>
+			<section id="education">
+				<h2>Education</h2>
+			</section>
+			<section id="mapDiv" class = "gray">
+				<h2>Where I've Lived and Worked</h2>
+			</section>
+			<footer id="lets-connect">
+				<h2 class="blue center-text white-text">Let's Connect</h2>
+					<ul id="footerContacts" class="flex-box light-blue">
+				</ul>
+			</footer>
+		</div>
+
+		<script src="js/resumeBuilder.js">
+		// To ensure that elements are ready on polyfilled browsers,
+		// wait for WebComponentsReady.
+			document.addEventListener('WebComponentsReady', function() {
+				var button = document.querySelector('paper-button');});
+				/* button.addEventListener('click', function() {
+					greeting.textContent = 'Hello, ' + input.value;
+				});
+			});
+		</script>
+
+	<!--
+		<script type="text/javascript">
+
+			if(document.getElementsByClassName('flex-item').length === 0) {
+				document.getElementById('topContacts').style.display = "none";
+			}
+			if(document.getElementsByTagName('h1').length === 0) {
+				document.getElementById('header').style.display = "none";
+			}
+			if(document.getElementsByClassName('work-entry').length === 0) {
+				document.getElementById('workExperience').style.display = "none";
+			}
+			if(document.getElementsByClassName('project-entry').length === 0) {
+				document.getElementById('projects').style.display = "none";
+			}
+			if(document.getElementsByClassName('education-entry').length === 0) {
+				document.getElementById('education').style.display = "none";
+			}
+			if(document.getElementsByClassName('flex-item').length === 0) {
+				document.getElementById('lets-connect').style.display = "none";
+			}
+			if(document.getElementById('map') === null) {
+				document.getElementById('mapDiv').style.display = "none";
+			}
+		</script>
+	-->
+	</body>
+</html>

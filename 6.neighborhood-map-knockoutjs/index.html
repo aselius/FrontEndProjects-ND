@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Neighborhood Map Project</title>
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css" media="screen and (min-width: 701px)">
+		<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 700px)"
+	</head>
+	<body>
+		<div id="head-bar">
+			<span class="site-title">Bars in <span data-bind="text: app.appViewModel.currentLocationString()" id="appLocationHeader"></span></span><br>
+			<form data-bind="submit:app.appViewModel.locationChangeOnSubmit" class="input-bar">
+				<input id="search-location" data-bind="textInput: app.appViewModel.currentLocationString"><button type="submit">Search</button>
+			</form>
+		</div>
+		<div id="map-canvas"></div>
+		<div id="foot-bar">
+			<span>Filter Locations</span>
+			<form data-bind="submit:app.appViewModel.filterLocationOnSubmit" class="input-bar">
+				<input id="filter-location" data-bind="textInput: app.appViewModel.filterKeywordString"><button type="submit">Filter</button>
+			</form>
+		</div>
+		<div id="list-panel">
+			<h2 class="list-header">Results</h2>
+			<!-- ko if: app.googleErrorBool -->
+			<h3> Google Maps is not responding! </h3>
+			<!-- /ko -->
+			<ul id="places" data-bind="foreach: app.appViewModel.filteredLocationArray">
+				<li>
+					<span data-bind="text: name, click: $parent.listClicked.bind($data, $index())"></span>
+				</li>
+			</ul>
+		</div>
+		<div id="moreinfo-panel">
+			<h2>More Info</h2>
+			<!-- ko if: app.appViewModel.checkMoreInfoResult() -->
+			<h3> There is no exact match! </h3>
+			<!-- /ko -->
+			<!-- ko if: app.appViewModel.placeMoreInfoError -->
+			<h3> DuckDuckGo is not responding. </h3>
+			<!-- /ko -->
+			<div data-bind="with: placeMoreInfo">
+				<h3 data-bind="text: Heading"></h3>
+				<a data-bind="text: AbstractSource, attr: { href: AbstractURL }"></a>
+			</div>
+		</div>
+		<footer>
+			<button data-bind="click: app.appViewModel.openMenu, css:hamburgerStatus">&#9776;</button>
+			<button data-bind="click: app.appViewModel.closeMenu, css:crossStatus">&#735;</button>
+		</footer>
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/knockout/dist/knockout.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdLTNclIefax9bBxwMaBf5NewnrN-NAAo&libraries=visualization,places" onerror="googleError()" async defer></script>
+		<script src="js/mapModel.js"></script>
+		<script src="js/appView.js"></script>
+		<script src="js/appViewModel.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

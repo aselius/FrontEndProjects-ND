@@ -1,0 +1,23 @@
+{
+  "name": "todo-mvc-backbone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aselius/backboneTodo.git"
+  },
+  "author": "Jaewoo Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aselius/backboneTodo/issues"
+  },
+  "homepage": "https://github.com/aselius/backboneTodo#readme"
+}

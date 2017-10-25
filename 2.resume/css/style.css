@@ -1,0 +1,285 @@
+/* TODO */
+/*
+1. Change font color orange to yellow (check)
+2. Remove bullets from the contacts (check)
+3. Change the contacts section for a better responsive design
+	/ better use of space (check)
+4.
+*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding:0;
+	margin:0;
+	font-family: "Roboto", sans-serif;
+}
+
+.clear-fix {
+	overflow: auto;
+}
+
+#profilePic {
+	padding: 0 5%;
+	float: left;
+}
+
+.education-entry,
+.work-entry,
+.project-entry {
+	padding: 0 5%;
+}
+
+#profile {
+	padding: 10px 3%;
+}
+
+.profile-entry {
+	padding: 10px 3% 10px;
+}
+
+h1 {
+	font-size: 40px;
+	color: #ffff19;
+	line-height: 48px;
+	display: inline;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 24px;
+	color: #999;
+	line-height: 29px;
+	padding: 10px;
+}
+
+h3 {
+	font-style: italic;
+	font-size: 20px;
+	color: #000;
+	line-height: 22px;
+}
+
+h4 {
+	font-weight: bold;
+	font-size: 14px;
+	color: #4a4a4a;
+	line-height: 17px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+	padding:10px 5%;
+
+}
+
+.date-text {
+	font-style: italic;
+	font-size: 14px;
+	color: #999;
+	line-height: 16px;
+	float: left;
+}
+
+.location-text {
+	font-style: italic;
+	font-size: 14px;
+	color: #999;
+	line-height: 16px;
+	float: right;
+
+}
+
+p {
+	font-size: 14px;
+	color: #333;
+	line-height: 21px;
+}
+
+a {
+	color: #1199c3;
+	text-decoration: none;
+	margin-top: 10px;
+	display: block;
+}
+
+.welcome-message {
+	font-style: italic;
+	font-size: 25px;
+	color: #3d3d29;
+	line-height: 28px;
+}
+
+#skills-h3 {
+	color: #ffff19;
+	display: none;
+}
+
+#summary-h3 {
+	color: #000;
+}
+
+.blue {
+	background-color: #666699;
+}
+
+.orange {
+	background-color: #f5ae23;
+}
+
+.orange-text {
+	color: #e68a00;
+}
+
+.white-text {
+	font-weight: bold;
+	color: #fff;
+}
+
+.bold-text {
+	font-weight: bold;
+	color: #000;
+}
+
+.light-blue {
+	background-color: #e0e0eb;
+}
+
+.gray {
+	background-color: #f3f3f3;
+	padding-bottom: 10px;
+	clear:both;
+}
+
+#contacts li {
+	list-style-type: none;
+}
+
+/* TODO: Replace with image later */
+#header {
+	background-color: #666699;
+	padding: 5% 5% 10px;
+}
+
+.flex-box {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 10px;
+}
+
+.flex-align {
+	align-items: center;
+}
+
+.imgwrap {
+	position: relative;
+	overflow: hidden;
+}
+
+.imgshadow {
+	box-shadow: 3px 3px 1px #ccc;
+	-webkit-box-shadow: 3px 3px 1px #ccc;
+	-moz-box-shadow: 3px 3px 1px #ccc;
+}
+
+.center-content {
+	padding: 2.5% 5%;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.biopic {
+	display: block;
+	border: 2px solid white
+	-webkit-border-radius: 15%;
+	-moz-border-radius: 15%;
+	border-radius: 15%;
+	float: left;
+	padding: 10px;
+	width: 200px;
+	display: none;
+}
+
+img {
+	padding: 10px;
+}
+
+span {
+	padding: 5px;
+}
+
+#lets-connect {
+	text-align: center;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+	#lets-connect {
+		margin-top: 5%;
+	}
+}
+
+@media only screen and (max-width:900px) {
+	.biopic {
+		width: 175px;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	#lets-connect {
+		margin-top: 10%;
+	}
+	.biopic {
+		width: 150px;
+	}
+	.welcome-message {
+		display: none;
+	}
+}
+
+#map {
+	display: block;
+	height: 100%;
+	margin: 0 5%;
+}
+
+#mapDiv {
+	height: 400px;
+	width: 100%;
+	padding-bottom: 5%;
+}
+
+@media only screen and (min-width: 750px) {
+	#skills-h3,
+	.biopic {
+		display: block;
+	}
+}
+
+.testmargin {
+	margin: 20px -15px 20px;
+}
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" conten="IE=edge,chrome=1">
+	<title>Backbone JS - TodoMVC</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+	<section id="todoapp">
+		<header id="header">
+			<h1>todos</h1>
+			<input id="new-todo" placeholder="What needs to be done?" autofocus>
+		</header>
+		<section id="main">
+			<input id="toggle-all" type="checkbox">
+			<label for="toggle-all">Mark all as complete</label>
+			<ul id="todo-list"></ul>
+		</section>
+		<footer id="footer"></footer>
+	</section>
+	<div id="info">
+		<p>Double-click to edit a todo</p>
+		<p>Written by Jaewoo Park</p>
+		<p>Adapted from <a href="http://todomvc.com">TodoMCV</a></p>
+	</div>
+
+	<!--
+		We need to create templates that will be inserted into HTML with the model bound to the placeholders.
+
+		The tags <%= %> is specific to Underscore.js. Thie allows the interpolation of values.
+	-->
+	<script type="text/template" id="item-template">
+		<div class="view">
+			<input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %> >
+			<label><%= title %></label>
+			<button class="destroy"></button>
+		</div>
+		<input class="edit" value="<%= title %>">
+	</script>
+
+	<!--
+		Stats-template
+
+		- displays the number of remaining incomplete items
+		- contains a list of hyperlinks used to perform actions when we implement our router.
+		- contains a button which can be used to clear all of the completed items
+	-->
+	<script type="text/template" id="stats-template">
+		<span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %>left</span>
+		<ul id="filters">
+			<li>
+				<a class="selected" href="#/">All</a>
+			</li>
+			<li>
+				<a href="#/active">Active</a>
+			</li>
+			<li>
+				<a href="#/completed">Completed</a>
+			</li>
+		</ul>
+		<% if (completed){ %>
+		<button id="clear-completed">Clear completed (<%= completed %>)</button>
+		<% } %>
+	</script>
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/underscore-min.js"></script>
+	<script src="js/lib/backbone-min.js"></script>
+	<script src="js/lib/backbone.localStorage.js"></script>
+	<script src="js/models/todo.js"></script>
+	<script src="js/collections/todos.js"></script>
+	<script src="js/views/todos.js"></script>
+	<script src="js/views/app.js"></script>
+	<script src="js/routers/router.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
